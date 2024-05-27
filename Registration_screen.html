@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Registration</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+  </head>
+  <body class="login-registration">
+    <h1 class="logologin">Bumovar</h1>
+    <div class="contenedor-login sombra">
+      <h2>Crea tu cuenta Bumovar</h2>
+      <h3>Comienza tu busqueda de compra-venta en Bumovar</h3>
+      <form id="form" name="registration-form" action="" method="get">
+        <input type="text" id="names" name="name" placeholder="Nombre" />
+        <p id="errorname" class="error-message"></p>
+        <br />
+        <input type="text" name="surname" id="surname" placeholder="Apellido" />
+        <p id="errorsurname" class="error-message"></p>
+        <br />
+        <input
+          type="text"
+          name="userid"
+          id="userid"
+          placeholder="Nombre de Usuario"
+        />
+        <p id="erroruser" class="error-message"></p>
+        <br />
+        <input type="text" name="usermail" id="usermail" placeholder="Email" />
+        <p id="errormail" class="error-message"></p>
+        <br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Contrase&nacute;a"
+        />
+        <p id="errorpassword" class="error-message"></p>
+        <br />
+        <input
+          type="password"
+          name="repassword"
+          id="repassword"
+          placeholder="Repetir Contrase&nacute;a"
+        />
+        <p id="errorrepassword" class="error-message"></p>
+        <br />
+        <a href="login_screen.html">
+        <button type="submit" class="button">Registrarse</button>
+        </a>
+      </form>
+    </div>
+  </body>
+</html>

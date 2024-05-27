@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <title>Checkout - Bumovar</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+  </head>
+  <body>
+    <header class="headermain">
+      
+      <a class="logo" href="index.html">Bumovar</a>
+    </header>
+
+    <div id="datos">
+      <div id="carro">
+        <div>
+          <div id="product">
+            <img class="photoproduct" src=
+            https://assets.adidas.com/images/w_600,f_auto,q_auto/c35214f6104c4a288bfed0c7c88dd94c_9366/Zapatillas_Superstar_XLG_Blanco_IF9995_01_standard.jpg>
+            <p>Zapatillas Adidas</p>
+            <h5>Precio: $40.000</h5>
+          </div>
+          <div id="product">
+            <img class="photoproduct"
+            src=https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw01276cc5/products/AD_GD6332/AD_GD6332-1.JPG>
+            <p>Remera Adidas</p>
+            <h5>Precio: $12.000</h5>
+          </div>
+          <div id="product">
+            <img class="photoproduct" src=
+            https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/6q8o4xp0drl2n5v4lbiu09cvdfxy/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5>
+            <p>Pantalon Adidas</p>
+            <h5>Precio: $15.000</h5>
+          </div>
+          <div id="product">
+            <img class="photoproduct" src=
+            https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/gmlo92e693o300dftgkx1mlk2b20/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5>
+            <p>Campera Adidas</p>
+            <h5>Precio: $35.000</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="formatosforms">
+      <div class="contenedor-login">
+        <form action="" id="form" name="checkout_form" method="get">
+          <h2>Datos de envío</h2>
+          <br />
+          <h3 class="formguide">Dirección:</h3>
+          <input
+            type="text"
+            id="useraddress"
+            name="useraddress"
+            placeholder="Ej: Av. De Las Pampas 2832"
+          />
+          <br />
+          <h3 class="formguide">Piso y/o departament (opcional):</h3>
+          <input type="text" name="userfloor" placeholder="Ej: 10A" />
+          <br />
+          <h3 class="formguide">Comentarios:</h3>
+          <input type="text" name="usercomments" />
+          <br />
+          <br />
+          <h2>Datos de pago</h2>
+          <label for="cardtype">Tipo de tarjeta:</label>
+          <select name="cardtype">
+            <option value="debit">Debito</option>
+            <option value="credit">Credito</option>
+          </select>
+          <br />
+          <h3 class="formguide">Número de tarjeta:</h3>
+          <input
+            type="number"
+            id="usercardnum"
+            name="usercardnum"
+            placeholder="#### #### #### ####"
+          />
+          <p id="errorcardnum" class="error-message"></p>
+          <br />
+          <h3 class="formguide">Código de seguridad:</h3>
+          <input
+            type="number"
+            id="usercardcode"
+            name="usercardcode"
+            placeholder="###"
+          />
+          <p id="errorcardcode" class="error-message"></p>
+          <br />
+          <label for="expirydate">Vencimiento de tarjeta: </label>
+          <select name="month" id="usercardmonth" onblur="validarFecha()">
+            <option value="">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <span> / </span>
+          <select name="year" id="usercardyear" onblur="validarFecha()">
+            <option value="">-</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+          </select>
+          <p id="errordate" class="error-message"></p>
+          <br />
+          <h3 class="formguide">Nombre del titular de la tarjeta</h3>
+          <input type="text" id="usercardname" placeholder="Juan Pablo" />
+          <p id="errorcardname" class="error-message"></p>
+          <br />
+          <h3 class="formguide">DNI del titular de la tarjeta</h3>
+          <input type="number" id="userdni" placeholder="# ### ###" />
+          <p id="errordni" class="error-message"></p>
+          <br />
+          <button class="buttonminialt" href="shopcart.html">Cancelar</button>
+          <button
+            class="buttonmini"
+            onclick="validarFormulario()"
+            type="submit"
+          >
+            Comprar ahora
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,605 @@
+:root {
+    /*Paleta de colores*/
+    --blanco: #F2F2F2;
+    --grisclaro: #D1D1D1;
+    --gris: #B8B8B8;
+    --primario: #ffa500;
+    --primariooscuro: #c88200;
+    --secundario: #2979C4;
+    --secundariooscuro: #336596;
+    --negro: #242800;
+
+    --azul: #4091c9;
+    --rojo: #ef3c2d;
+    --verde: #a5eea0;
+
+    --error: #ef3c2d;
+    --sucess: #a5eea0;
+
+    /*Fuente*/
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+.login-registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primario);
+}
+
+input{
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 0px;
+    padding: 1.5rem;
+    border-style: solid;
+    border-width: .2rem;
+    border-color: var(--negro);
+    border-radius: 1rem;
+}
+
+select {
+    border: .2rem;
+}
+
+/* # Generales ############################### */
+
+
+.contenedor {
+    margin: 1.5rem;
+}
+
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formatosforms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formguide {
+    padding-left: .5em;
+    font-weight: 400;
+}
+
+/* # Botones ############################### */
+
+.button {
+    padding: 1rem;
+    margin: .5rem;
+    width: 100%;
+    border-radius: 2rem;
+    background-color: var(--primario);
+    border-color: var(--primario);
+    border-style: solid;
+    border-width: .2em;
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+
+.buttonalt {
+    padding: 1rem;
+    margin: .5rem;
+    width: 100%;
+    border-radius: 2rem;
+    background-color: white;
+    border-color: var(--primario);
+    border-style: solid;
+    border-width: .2em;
+    color: var(--negro);
+    font-size: 1.2rem;
+}
+
+.buttonmini{
+    padding: 1rem;
+    margin: .5rem;
+    width: 40%;
+    border-radius: 2rem;
+    background-color: var(--primario);
+    border-color: var(--primario);
+    border-style: solid;
+    border-width: .2em;
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+
+.buttonminialt{
+    padding: 1rem;
+    margin: .5rem;
+    width: 40%;
+    border-radius: 2rem;
+    background-color: white;
+    border-color: var(--primario);
+    border-style: solid;
+    border-width: .2em;
+    color: var(--negro);
+    font-size: 1.2rem;
+}
+
+.button:hover,
+.buttonalt:hover,
+.buttonmini:hover,
+.buttonminialt:hover {
+    cursor: pointer;
+    background-color: var(--secundario);
+    transition: .2s;
+}
+.viewproduct{
+    background-color: #FF4500;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.viewproduct:hover { 
+    background: #fd9393;}
+
+
+/* # Login & Reg  ############################### */
+
+.logologin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    color: var(--blanco);
+}
+
+.contenedor-login {
+    width: 40%;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    background: var(--blanco);
+}
+
+/* # barra nav ############################### */
+
+.headermain {
+    padding: 0.2rem;
+    height: 2rem;
+}
+
+header{
+    background-color: var(--primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headermain img{
+    height: 2rem;
+}
+.headermain img:hover {
+    background: #f09b08;
+    border-radius: px;    
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.menu img{
+    width: 5rem;
+    margin: .5rem;
+}
+
+a{
+    cursor: pointer;
+}
+.logo{
+    flex-grow: 5;
+    text-align: center;
+    align-self: center;
+    font-size: 3rem;
+    color: var(--blanco);
+}
+
+
+.headerfiltros a:hover { 
+
+    color: #000000;
+    border: 2px solid rgb(248, 170, 36);
+    border-radius: 0px;
+    padding: 2px;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.headerfiltros{
+    height: 1rem;
+    color: var(--blanco);
+    padding: .5rem;
+}
+
+/* # mobile barra navegacion  ############################### */
+
+.menu {
+    display: none;
+}
+  
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: var(--primario);
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+}
+  
+.overlay--active {
+    width: 100%;
+}
+  
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+}
+  
+.overlay a:hover,
+.overlay a:focus {
+    color: #0088a9;
+}
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: var(--blanco);
+}
+  
+@media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+    
+}
+  
+@media only screen and (max-width: 800px) {
+    .headerfiltros,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+}
+
+        
+
+/* # Pagina producto ############################### */
+
+.proproduct{
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--blanco);
+}
+
+.fotoproducto{
+    align-self: center;
+    width: 60%;
+    float: left;
+}
+
+.fotoproducto img{
+    width: 100%;
+}
+
+.colprecio{
+    width: 38%;
+    float: left;
+    padding-left: 20px;
+}
+
+.descripcion{
+    width: 38%;
+    float: right;
+}
+
+.cursor {
+    cursor: pointer;
+}
+   
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+
+.column {
+    float: left;
+    width: 40%;
+}
+  
+
+.demo {
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/* # Pagina en mobil ############################### */
+
+@media screen and (max-width: 600px) {
+
+    #logohome {
+        display: none;
+    }
+    .product-item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .colprecio{
+        float: left;
+        width: 100%;
+    }
+
+    .fotoproducto{
+        width: 100%;
+    }
+    .descripcion{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 1250px) {
+   
+    .product-item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+   
+    #logohome {
+        display: none;
+    }
+    .imghome {
+        display: none;
+    }
+    .buynow {
+        display: none;
+    }
+    .photoproduct{
+        width: 80%;
+    }
+    .product_name{
+
+        display: none;
+    }
+    .price{
+        display: none;
+    }
+}
+@media screen and (max-width: 1450px) {
+    
+    .product-item{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #logohome {
+        display: none;
+    }
+
+    .imghome {
+        display: none;
+    }   
+    .buynow{
+        display: none;
+    }
+}
+
+/*---------- HOME----------*/
+
+
+/*PRODUCTOS HOME*/
+
+#product{
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    margin-left: 75px;
+    margin-top: 10px;
+   
+}
+
+.product-item{
+    margin: 30px;
+    text-align: center;
+    width: 50%;
+    height: 100px;
+    border: 1px solid black;
+    padding: 5%;
+    border-radius: 30px;
+    box-shadow:  5px 5px 12px#00000035;
+    background: #FFFFFF25;
+  
+}
+.photoproduct{
+    float: left;
+    height: 100px;
+}
+
+/*BOTON IR A COMPRAR HOME*/
+.buynow{
+    z-index: 1;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    align-self: center;
+    position: absolute;
+    left: 46%;
+    top: 250px;
+    cursor: pointer;
+}
+.buynow:hover { 
+    background: #c1b6b6;
+}
+.buynow a:hover { 
+    color: #242800;
+    background: #fcfcfc;
+}
+
+/*TEXTO HOME*/
+#h1home {
+    font-size: 24px;
+    background: white; 
+    font-weight: bold; 
+    text-align: center; 
+    padding: 10px; 
+    border-radius: 10px; 
+    border: 1px solid black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#h2home {
+    font-size: 24px;
+    background: white; 
+    font-weight: bold; 
+    text-align: center; 
+    padding: 10px; 
+    border-radius: 10px; 
+    border: 1px solid black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*IMAGEN HOME*/
+
+#logohome{
+
+    width: 400px;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    align-self: center;
+    position: sticky;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    opacity: 0.90; 
+}
+/* FONDO HOME*/
+
+#backgroundhome{
+    background-image: url("img/fondohome.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    height: auto;
+}
+.shopcart_background{
+    background: #d85f03;
+    background-color: #000000;
+}
+
+#shopcart_product {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    gap: 7%;
+  }
+  
+.photoproduct {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+.trashcan {
+    width: 20px;
+    height: 20px;
+  }
+
+.trashcan:hover{
+   cursor: pointer;
+
+  }
+
+.shopcart_product_name{
+    color: #000000;
+}
+.shopcart_product_price{
+    color: #000000;
+}
+.shopcart_product_quantity{
+    color: #000000;
+}
+.shopcart_product_size{
+    color: #000000;
+}
+.gotocheckout{
+    background-color:#f84343;
+    float: right;
+    z-index: 1;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+.gotocheckout:hover { 
+    background: #c1b6b6;
+}
+.gotocheckout a:hover { 
+    color: #242800;
+    background: #fcfcfc;
+}
